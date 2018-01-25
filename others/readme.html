@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>README - Beautiful JBake</title>
+  <meta name="author" content="" />
+  <meta name="description" content="">
+  <link rel="alternate" type="application/atom+xml" href="../feed.xml" title="Beautiful JBake"/>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap-social.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+
+  <link rel="stylesheet" href="../css/asciidoctor.css">
+  <link rel="stylesheet" href="../css/prettify.css">
+  <link rel="shortcut icon" href="../favicon.ico">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+<div class="container-fluid">
+
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+  <span class="sr-only">Toggle navigation</span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="../index.html">Beautiful JBake</a>
+</div>
+
+<div class="collapse navbar-collapse" id="main-navbar">
+<ul class="nav navbar-nav navbar-right">
+  <li><a href="../archive.html">Archive</a></li>
+  <li><a href="../tags.html">Tags</a></li>
+  <li><a href="../about.html">About</a></li>
+  <li class="navlinks-container">
+    <a class="navlinks-parent" href="javascript:void(0)">Others</a>
+    <div class="navlinks-children">
+      <a href="../others/readme.html">README</a>
+      <a href="../jbake2.5.1doc">JBake<br/>日本語訳</a>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="avatar-container">
+  <div class="avatar-img-border">
+    <a href="../index.html">
+      <img class="avatar-img" src="../images/avatar-icon.png"/>
+    </a>
+  </div>
+</div>
+
+</div>
+</nav>
+
+<header class="header-section">
+<div class="intro-header no-img">
+<div class="container">
+<div class="row">
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<div class="page-heading">
+<h2>README</h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<div class="container">
+<div class="row">
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<article role="main" class="blog-page">
+<div class="sect2">
+<h3 id="_概要">概要</h3>
+<div class="paragraph">
+<p>Beautiful JBake は <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> を参考にして作成した JBakeテンプレート です。<br>
+できるだけ近づくようには頑張ってみましたが JBake は設定ファイルに階層構造が持てないのでイマイチ残念な結果になっているような気がしないでもないです。<br>
+JBake v2.5.1 で開発したので他のバージョンで動くかどうかは不明です。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_クイックスタート">クイックスタート</h3>
+<div class="paragraph">
+<p>とりあえず <a href="http://jbake.org/docs/2.5.1/">ここ</a> とか見ながらJBakeをインストールしてください。<br>
+英語は苦手だけれど、いいかげんな翻訳でも怒らない大らかな心をお持ちな方であれば <a href="https://yamanee.info/jbake2.5.1doc/">こちら</a> が役に立つかもしれません。</p>
+</div>
+<div class="paragraph">
+<p>次に git clone してベイクしてサーバーモードで起動してください。多分こんな。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-shell" data-lang="shell">$ git clone https://github.com/Yamane/beautiful-jbake.git [適当なディレクトリ]
+$ cd [適当なディレクトリ]
+$ jbake -b -s</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>それでもって <a href="http://localhost:8820" class="bare">http://localhost:8820</a> にアクセスすればなんかが見えるようになってるハズです。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_デフォルトテンプレートとは違う部分">デフォルトテンプレートとは違う部分</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>インデックスページのページングに対応しています。</p>
+</li>
+<li>
+<p>インデックスページにコンテンツの内容全部ではなく、HTMLタグを除去したあと規定の文字数までを表示します。</p>
+</li>
+<li>
+<p>サイトのコンテンツ内で使用されているタグの一覧ページを生成します。</p>
+</li>
+<li>
+<p>テキスト色や背景色など一部デザインの変更を設定ファイルによって行うことができます。</p>
+</li>
+<li>
+<p>ほとんどのページヘッダ部分に背景画像を指定することができます。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_独自メタデータヘッダ">独自メタデータヘッダ</h3>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">項目名</th>
+<th class="tableblock halign-left valign-top">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">subtitle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">コンテンツのサブタイトル。タイトルの下の行に表示されたりする。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">image</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">インデックスページとかに表示されたりする。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bigimg</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">コンテンツのタイトル、サブタイトルの背景として大きく表示されたりする。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_jbake_properties_設定項目">jbake.properties 設定項目</h3>
+<div class="paragraph">
+<p>設定ファイル <code>jbake.properties</code> には以下の項目が定義されてます。<br>
+これらの記述を変えることで、それなりにカスタマイズすることができる気がします。
+書い出しておいてなんですが、ここを見るより同梱されているファイルの中身をを見たほうが理解しやすい気がします。<br>
+しかしなあ、いまどきユーザーが触る想定の設定がプロパティファイルはないよなあ。エスケープめんどいから日本語でコメントも書き込む気にもならないし。</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 11.1111%;">
+<col style="width: 55.5556%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">項目名</th>
+<th class="tableblock halign-center valign-top">必須</th>
+<th class="tableblock halign-left valign-top">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">site.host</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">○</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RSSフィードのLINK生成とかで使うURIの接頭辞。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">site.lang</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">○</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">htmlタグとかに入れる言語指定。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">site.title</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">○</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">サイトのタイトル。index.html に大きく表示されてるやつ。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">site.subtitle</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">サイトのサブタイトル。index.html のタイトルの下の行に表示されているやつ。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">site.avatar</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">サイトの上中央に表示されているアバターアイコン。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">index.bigimg</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">インデックスページに表示される画像。大きめのやつ。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">index.paginate</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">インデックスページをページングするかどうか。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">index.posts_per_page</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">インデックスページをページングする場合、１ページに何件表示するか。<code>index.paginate</code> をtrueにする場合は必須。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">index.excerpt.size</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">○</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">インデックスページや、タグ一覧ページに表示するコンテンツ内容の抜粋の文字数。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">date.format</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">○</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">日付を表示する部分のフォーマット。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">month.format</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">○</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">月を表示する部分のフォーマット。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">day.format</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">○</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">日を表示する部分のフォーマット。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">navbar_col</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">○</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ナビゲーション部分の背景色。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">navbar_text_col</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">○</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ナビゲーション部分のテキスト色。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">navbar_children_col</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">○</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ナビゲーションのドロップダウン背景色。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">page_col</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">○</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">コンテンツ部分の背景色。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">link_col</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">○</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">リンクの文字色。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">hover_col</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">○</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">リンク選択時の文字色。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">footer_col</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">○</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">フッター部分の背景色。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">footer_text_col</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">○</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">フッター部分の文字色。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">footer_link_col</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">○</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">フッター部分のリンク色。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">navbar_img</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ナビゲーション部分の背景画像。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">page_img</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">コンテンツ部分の背景画像。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">footer_img</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">フッター部分の背景画像。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">author.name</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">フッターの&copy;の部分に表示するやつ。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">author.email</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">フッターのアイコンでリンクするメールアドレス。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">author.facebook</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">フッターのメールアイコンでリンクするFacebookアカウント。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">author.twitter</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">フッターのメールアイコンでリンクするTwitterアカウント。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">author.github</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">フッターのメールアイコンでリンクするGitHubアカウント。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">render.archive</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JBake制御にてアーカイブページの生成を制御するかどうかのフラグ。このテンプレートでは独自にアーカイブページを出力しているので、falseのまま書き換えないようにしてください。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">template.simple.file</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">コンテンツヘッダ部分にあまり装飾がないページタイプ <code>simple</code> のためのテンプレート定義。このページで使ってます。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">template.archive.file</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">アーカイブページのためのテンプレート定義。書き換えないこと推奨。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">template.tag-list.file</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">タグ一覧ページのためのテンプレート定義。書き換えないこと推奨。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">template.maincss.file</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">スタイルシートの一部記述を <code>jbake.properties</code> で書き換えられるようにするために作ったテンプレート定義。書き換えないこと推奨。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">template.maincss.extension</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">remove_tag.regex</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTML記述からタグ部分を削除する正規表現。テンプレートファイル内に書くとエスケープがめんどいのでここに退避してある感じ。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_その他">その他</h3>
+<div class="paragraph">
+<p>サンプルサイトで利用している画像ファイルには、 <a href="http://photo53.com/">京都フリー写真素材</a> にて配布されているものを利用させて頂いています。とてもきれい。</p>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+
+<footer>
+<div class="container beautiful-jekyll-footer">
+<div class="row">
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<ul class="list-inline text-center footer-links">
+    <li>
+    <a href="https://twitter.com/yamaneeeeee" title="Twitter">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  <li>
+    <a href="https://github.com/Yamane" title="GitHub">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  <li>
+    <a href="../feed.xml" title="RSS">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+</ul>
+<p class="copyright text-muted">
+&copy; Yamamoto Yamane 2018 |
+Baked with <a href="http://jbake.org">JBake v2.5.1</a>
+</p>
+<p class="theme-by text-muted">
+  Theme by <a href="https://github.com/Yamane/beautiful-jbake/" target="_blank">beautiful-jbake</a>     
+  adapted from <a href="http://deanattali.com/beautiful-jekyll/" target="_blank">beautiful-jekyll</a>
+</p>
+</div>
+</div>
+</div>
+</footer>
+
+<script src="../js/jquery-1.11.2.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/prettify.js"></script>
+<script src="../js/run_prettify.js"></script>
+<script src="../js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<feed xmlns='http://www.w3.org/2005/Atom' xml:lang='ja'>
+  <id>https://github.io/Yamane/bj-demo</id>
+  <title>Beautiful JBake</title>
+  <updated>2018-01-25T18:42:52+0900</updated>
+  <link rel="alternate" type="text/html" href="https://github.io/Yamane/bj-demo" />
+  <link rel='self' type='application/atom+xml' href='https://github.io/Yamane/bj-demo/feed.xml' />
+  <entry>
+    <id>https://github.io/Yamane/bj-demo/blog/fourth-post.html</id>
+    <title>Fourth Post</title>
+    <link></link>
+    <link rel="alternate" type="text/html" href="https://github.io/Yamane/bj-demo/blog/fourth-post.html" />
+    <updated>2013-10-17T00:00:00+0900</updated>
+    <summary>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel diam purus. Curabitur ut nisi lacus.
+
+
+
+
+http://example.org
+
+
+Example.org
+
+
+
+
+Nam id nisl quam. Donec a lorem sit amet libero pretium vulputate vel ut purus. Suspendisse leo arcu,
+mattis et imperdiet luctus, pulvinar vitae mi. Quisque fermentum sollicitudin feugiat. Mauris nec leo
+ligula. Vestibulum tristique odio ut risus ultric...</summary>
+  </entry>
+  <entry>
+    <id>https://github.io/Yamane/bj-demo/blog/third-post.html</id>
+    <title>Third Post</title>
+    <link></link>
+    <link rel="alternate" type="text/html" href="https://github.io/Yamane/bj-demo/blog/third-post.html" />
+    <updated>2013-09-26T00:00:00+0900</updated>
+    <summary>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel diam purus. Curabitur ut nisi lacus.
+
+
+
+
+http://example.org
+
+
+Example.org
+
+
+
+
+Nam id nisl quam. Donec a lorem sit amet libero pretium vulputate vel ut purus. Suspendisse leo arcu,
+mattis et imperdiet luctus, pulvinar vitae mi. Quisque fermentum sollicitudin feugiat. Mauris nec leo
+ligula. Vestibulum tristique odio ut risus ultric...</summary>
+  </entry>
+  <entry>
+    <id>https://github.io/Yamane/bj-demo/blog/second-post.html</id>
+    <title>Second Post</title>
+    <link></link>
+    <link rel="alternate" type="text/html" href="https://github.io/Yamane/bj-demo/blog/second-post.html" />
+    <updated>2013-08-25T00:00:00+0900</updated>
+    <summary>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel diam purus. Curabitur ut nisi lacus.
+
+  http://example.org
+  Example.org
+
+Nam id nisl quam. Donec a lorem sit amet libero pretium vulputate vel ut purus. Suspendisse leo arcu,mattis et imperdiet luctus, pulvinar vitae mi. Quisque fermentum sollicitudin feugiat. Mauris nec leoligula. Vestibulum tristique odio ut risus ultricies a h...</summary>
+  </entry>
+  <entry>
+    <id>https://github.io/Yamane/bj-demo/blog/first-post.html</id>
+    <title>First Post</title>
+    <link></link>
+    <link rel="alternate" type="text/html" href="https://github.io/Yamane/bj-demo/blog/first-post.html" />
+    <updated>2013-07-24T00:00:00+0900</updated>
+    <summary>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel diam purus. Curabitur ut nisi lacus.
+
+
+http://example.org
+Example.org
+
+
+Nam id nisl quam. Donec a lorem sit amet libero pretium vulputate vel ut purus. Suspendisse leo arcu, 
+mattis et imperdiet luctus, pulvinar vitae mi. Quisque fermentum sollicitudin feugiat. Mauris nec leo 
+ligula. Vestibulum tristique odio ut risus ultricies ...</summary>
+  </entry>
+</feed>
