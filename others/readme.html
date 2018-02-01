@@ -91,7 +91,7 @@ JBake v2.5.1 で開発したので他のバージョンで動くかどうかは�
 <h3 id="_クイックスタート">クイックスタート</h3>
 <div class="paragraph">
 <p>とりあえず <a href="http://jbake.org/docs/2.5.1/">ここ</a> とか見ながらJBakeをインストールしてください。<br>
-英語は苦手だけれど、いいかげんな翻訳でも怒らない大らかな心をお持ちな方であれば <a href="https://yamanee.info/jbake2.5.1doc/">こちら</a> が役に立つかもしれません。</p>
+英語は苦手だけれど、いいかげんな翻訳でも怒らない大らかな心をお持ちな方であれば <a href="https://yamane.github.io/bj-demo/jbake2.5.1doc/">こちら</a> が役に立つかもしれません。</p>
 </div>
 <div class="paragraph">
 <p>次に git clone してベイクしてサーバーモードで起動してください。多分こんな。</p>
@@ -208,7 +208,7 @@ $ jbake -b -s</code></pre>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">index.bigimg</p></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">インデックスページに表示される画像。大きめのやつ。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">インデックスページのタイトルの後ろに表示される画像。</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">index.paginate</p></td>
@@ -224,6 +224,36 @@ $ jbake -b -s</code></pre>
 <td class="tableblock halign-left valign-top"><p class="tableblock">index.excerpt.size</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">○</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">インデックスページや、タグ一覧ページに表示するコンテンツ内容の抜粋の文字数。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">archive.title</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">アーカイブページのタイトル。指定しない場合は「Archive」。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">archive.subtitle</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">アーカイブページのサブタイトル。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">archive.bigimg</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">アーカイブページのタイトルの後ろに表示される画像。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tags.title</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">タグ一覧ページのタイトル。指定しない場合は「Tags」。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tags.subtitle</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">タグ一覧ページのサブタイトル。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tags.bigimg</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">タグ一覧ページのタイトルの後ろに表示される画像。</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">date.format</p></td>
@@ -326,19 +356,9 @@ $ jbake -b -s</code></pre>
 <td class="tableblock halign-left valign-top"><p class="tableblock">フッターのメールアイコンでリンクするGitHubアカウント。</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">render.archive</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">JBake制御にてアーカイブページの生成を制御するかどうかのフラグ。このテンプレートでは独自にアーカイブページを出力しているので、falseのまま書き換えないようにしてください。</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">template.simple.file</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">コンテンツヘッダ部分にあまり装飾がないページタイプ <code>simple</code> のためのテンプレート定義。このページで使ってます。</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">template.archive.file</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">アーカイブページのためのテンプレート定義。書き換えないこと推奨。</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">template.tag-list.file</p></td>
